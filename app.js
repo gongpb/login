@@ -1,6 +1,4 @@
-﻿consloe.log("test");
-consloe.log("test");
-consloe.log("test");
+﻿
 /**
  * Module dependencies.
  */
