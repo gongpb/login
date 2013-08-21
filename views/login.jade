@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  form.form-horizontal(method='post',action='/login')
+    fieldset
+      legend 用户登录
+      div.control-group
+        label.control-label(for='username') 用户名
+        div.controls
+          input.input-xlarge#username(type='text',name='username')
+      div.control-group
+        label.control-label(for='password') 密码
+        div.controls
+          input.input-xlarge#password(type='password',name='password')
+      div.form-actions
+        button.btn.btn-primary(type='submit') 登录
+      
+  

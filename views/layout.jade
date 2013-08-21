@@ -1,0 +1,42 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='stylesheets/bootstrap-responsive.css')
+  body
+    div.navbar.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          a.btn.btn-navbar(data-toggle="collapse",data-target=".nav-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href="/") my_program
+          div.nav-collapse
+            ul.nav
+              li.active
+                a(href="/")
+                                           首页
+              if user==''||user==null||user=='undefined'
+                li.active
+                  a(href="/login") 登录
+                li.active
+                  a(href="/reg") 注册
+              else
+                li.active
+                  a(href="/logout") 退出
+    div#container.container
+      if error!=''&&error!=null
+        div.alert.alert-error
+          error= error
+      else
+        div.alert.alert-success
+      block content
+    hr
+    footer
+      p 
+        user= user
+        a(href="http://www.csser.com/board/4f3f516e38a5ebc978000508",target="_blank") 2012
+      
