@@ -12,7 +12,6 @@ var crypto = require('crypto');
 var app = express();
 
 
-
 //app.use(function(req,res,next){
 //    res.locals.user=req.session.user;
 //    res.locals.error=req.flash('error').length?req.flash('error'):null;
